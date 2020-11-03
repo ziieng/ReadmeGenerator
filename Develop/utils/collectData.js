@@ -1,12 +1,20 @@
 const inquirer = require("inquirer");
 
-function dashSpace(str) {
-    return str.split(" ").join("-")
+function noSpace(str) {
+    if (str.length > 1) {
+        str = str.split(" ")
+        for (let i = 1; i < str.length; i++) {
+            let strArr = str[i].split("")
+            strArr[0] = strArr[0].toUpperCase()
+            str[i] = strArr.join("")
+        }
+        str = str.join("")
+    }
+    return str
 }
 
 async function createAnswer(questions) {
     //async strategy for reusing previous answer as a default from https://stackoverflow.com/questions/49520423/
-    // (async () => {
     const ans1 = await inquirer.prompt([{
         type: "input",
         message: "What is the title of your project?",
@@ -15,7 +23,7 @@ async function createAnswer(questions) {
     const ans2 = await inquirer.prompt([{
             type: "input",
             message: "What is the GitHub Repository for this project named?",
-            default: dashSpace(ans1.title),
+            default: noSpace(ans1.title),
             name: "repo",
         },
         ...questions
