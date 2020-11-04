@@ -46,8 +46,8 @@ function pickLicense(data) {
             data.license = "This project uses the ISC license. For more details, visit [this link](https://opensource.org/licenses/ISC)."
             break;
         case "GNU GPL":
-            data.licenseBadge = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
-            data.license = "This project uses the GNU GPL 3.0 license. For more details, visit [this link](https://www.gnu.org/licenses/gpl-3.0/)."
+            data.licenseBadge = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.html)"
+            data.license = "This project uses the GNU GPL 3.0 license. For more details, visit [this link](https://www.gnu.org/licenses/gpl-3.0.html)."
             break;
         case "Apache":
             data.licenseBadge = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
