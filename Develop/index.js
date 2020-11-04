@@ -14,6 +14,7 @@ async function init() {
     let responses = await collect.createAnswer(questions) //.catch((err) => console.log(err))
     let data = collect.pickLicense(responses)
     writeToFile(data.fileName, data, (err) => console.log(err))
+    console.log("README.md file generated!")
 }
 
 // array of questions for user
@@ -63,9 +64,9 @@ const questions = [{
         name: "github"
     },
     {
+        type: "input",
         message: "What is your email address?",
         name: "email",
-        type: "input",
         validate: function (email) {
             //test from https://gist.github.com/Amitabh-K/ae073eea3d5207efaddffde19b1618e8
             valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)

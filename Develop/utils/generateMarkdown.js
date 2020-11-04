@@ -35,7 +35,7 @@ function generateMarkdown(data) {
   To launch the tests, run this command in your terminal:
   \`\`\`
   ${data.tests}
-  \`\`\`
+  \`\`\` 
   
   ## Questions
   If you have questions to ask or issues to report, please visit the [GitHub repository](https://github.com/${data.github}/${data.repo}) for this project, [my GitHub profile](https://github.com/${data.github}), or send me an email at ${data.email}.
