@@ -19,6 +19,7 @@ async function createAnswer(questions) {
         type: "input",
         message: "What is the title of your project?",
         name: "title",
+        validate: (input) => (input == "") ? false : true
     }]);
     const ans2 = await inquirer.prompt([{
             type: "input",
