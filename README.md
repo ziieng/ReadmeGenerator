@@ -13,8 +13,6 @@
 ## Description
 A Node.js CLI to generate Readme's from a template and a series of questions.
 
-### 
-
 ## Installation
 To install app dependencies, run this command in your terminal:
 ```
@@ -23,6 +21,7 @@ npm i
 
 ## Usage
 The CLI interface is limited, so some manual editing is required.
+[![A walkthrough video for the app's user flow.](https://img.youtube.com/vi/-eKSjiGSSOQ/0.jpg)](http://www.youtube.com/watch?v=-eKSjiGSSOQ)
 
 ## License
 This project uses the ISC license. For more details, visit [this link](https://opensource.org/licenses/ISC).
