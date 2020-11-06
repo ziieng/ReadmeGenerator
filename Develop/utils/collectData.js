@@ -26,6 +26,7 @@ async function createAnswer(questions) {
             message: "What is the GitHub Repository for this project named?",
             default: noSpace(ans1.title),
             name: "repo",
+            validate: (input) => (input == "") ? false : true
         },
         ...questions
     ]);
