@@ -14,7 +14,7 @@ async function init() {
     let responses = await collect.createAnswer(questions) //.catch((err) => console.log(err))
     let data = collect.pickLicense(responses)
     writeToFile(data.fileName, data, (err) => console.log(err))
-    console.log("README.md file generated!")
+    console.log(data.fileName + " successfully generated!")
 }
 
 // array of questions for user
@@ -22,7 +22,8 @@ async function init() {
 const questions = [{
         type: "input",
         message: "Please describe your project.",
-        name: "description"
+        name: "description",
+            validate: (input) => (input == "") ? false : true
     },
     {
         type: "list",
@@ -51,17 +52,20 @@ const questions = [{
     {
         type: "input",
         message: "What else does a user need to know about using your repo?",
-        name: "usage"
+        name: "usage",
+            validate: (input) => (input == "") ? false : true
     },
     {
         type: "input",
         message: "What guidelines do you have for others wanting to contribute to this repo?",
-        name: "contributing"
+        name: "contributing",
+            validate: (input) => (input == "") ? false : true
     },
     {
         type: "input",
         message: "What is your GitHub username?",
-        name: "github"
+        name: "github",
+            validate: (input) => (input == "") ? false : true
     },
     {
         type: "input",
@@ -83,7 +87,8 @@ const questions = [{
         message: "What should your file be named?",
         name: "fileName",
         type: "input",
-        default: "README.md"
+        default: "README.md",
+        validate: (input) => (input == "") ? false : true
     }
 ];
 
